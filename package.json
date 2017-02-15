@@ -10,7 +10,7 @@
     "testone": "./node_modules/mocha/bin/mocha",
     "lint": "./node_modules/eslint/bin/eslint.js -c .eslintrc ./lib/**/* --ignore-path .eslintignore --quiet",
     "doc": "rm -rf docs/* && ./node_modules/jsdoc/jsdoc.js lib/ -c .jsdocrc.json --readme lib/doc.md",
-    "prepublish": "./scripts/publish.sh"
+    "publish": "./scripts/publish.sh"
   },
   "dependencies": {
     "@fiverr/eslint-config-fiverr": "0.0.9",
