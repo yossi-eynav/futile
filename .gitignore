@@ -1,0 +1,7 @@
+*.log
+node_modules
+
+playground/*
+playground/node_modules/*
+!playground/example.js
+!playground/node_modules/commodity
