@@ -1,6 +1,8 @@
 # Commodity
 Collection of low level Javascript helper functions targeting language primitives and native objects
 
+Test status: [![CircleCI](https://circleci.com/gh/fiverr/commodity.svg?style=svg)](https://circleci.com/gh/fiverr/commodity)
+
 ## Use commodity [Documentation](https://fiverr.github.io/commodity/)
 
 Import the library
