@@ -17,8 +17,3 @@ if [[ $? -ne 0 ]]; then
 else
   echo "-= Tests Passed =-"
 fi
-
-echo ""
-
-echo "-= Creating docs =-"
-npm run doc
