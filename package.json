@@ -1,9 +1,13 @@
 {
-  "name": "commodity",
-  "version": "0.0.1",
+  "name": "@fiverr/commodity",
+  "version": "0.0.2",
   "author": "Fiverr",
   "license": "MIT",
   "description": "Collection of low level Javascript helper functions targeting language primitives and native objects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fiverr/commodity.git"
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "find ./lib -name 'test.js' | xargs ./node_modules/mocha/bin/mocha",
