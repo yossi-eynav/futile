@@ -1,15 +1,10 @@
 const commodity = require('commodity');
-console.log(commodity.arr.shuffle([1, 2, 3]));
-console.log(commodity.str.interpolate('Hello, ${name}', {name: 'Martin'}));
+console.log(commodity.shuffle([1, 2, 3]));
+console.log(commodity.interpolate('Hello, ${name}', {name: 'Martin'}));
 
 
-const flat = require('commodity/lib/flat');
-console.log(flat.shuffle([1, 2, 3]));
-console.log(flat.interpolate('Hello, ${name}', {name: 'Martin'}));
+const shuffle = require('commodity/lib/shuffle');
+console.log(shuffle([1, 2, 3]));
 
-
-const arr = require('commodity/lib/arr');
-console.log(arr.shuffle([1, 2, 3]));
-
-const str = require('commodity/lib/str');
-console.log(str.interpolate('Hello, ${name}', {name: 'Martin'}));
+const interpolate = require('commodity/lib/interpolate');
+console.log(interpolate('Hello, ${name}', {name: 'Martin'}));
