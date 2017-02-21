@@ -1,6 +1,6 @@
 {
   "name": "@fiverr/commodity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Fiverr",
   "license": "MIT",
   "description": "Collection of low level Javascript helper functions targeting language primitives and native objects",
