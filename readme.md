@@ -57,6 +57,11 @@ Modules should be commented in [JSDoc](http://usejsdoc.org/) so the automated do
 
 Each collection (e.g. `str`, `arr`) needs to expose all it's modules, and `lib` should expose all collections.
 
+Pro git tip: Push to master with the new docs submodule
+```sh
+git push origin master --recurse-submodules=on-demand
+```
+
 ## Version management
 The version number specify `major`.`minor`.`patch`
 
