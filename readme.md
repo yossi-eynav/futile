@@ -2,11 +2,9 @@
 Collection of low level Javascript helper functions targeting language primitives and native objects
 
 [![build status](https://img.shields.io/circleci/project/github/fiverr/commodity.svg)](https://circleci.com/gh/fiverr/commodity)
-[![codecov](https://codecov.io/gh/fiverr/commodity/branch/master/graph/badge.svg)](https://codecov.io/gh/fiverr/commodity)
 [![pull requests](https://img.shields.io/github/issues-pr/fiverr/commodity.svg)](https://github.com/fiverr/commodity/pulls)
 [![issues](https://img.shields.io/github/issues/fiverr/commodity.svg)](https://github.com/fiverr/commodity/issues)
 [![npm package](https://badge.fury.io/js/%40fiverr%2Fcommodity.svg)](https://www.npmjs.com/package/@fiverr/commodity)
-![version](https://img.shields.io/node/v/fiverr/commodity.svg)
 
 ## Use commodity [Documentation](https://fiverr.github.io/commodity/)
 
