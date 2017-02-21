@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "-= Running ESLint =-"
 npm run lint -s
 if [[ $? -ne 0 ]]; then
