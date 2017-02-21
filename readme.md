@@ -7,7 +7,7 @@ Test status: [![CircleCI](https://circleci.com/gh/fiverr/commodity.svg?style=svg
 
 Import the library
 ```javascript
-const commodity = require('commodity');
+const commodity = require('@fiverr/commodity');
 
 commodity.shuffle([1, 2, 3]);
 commodity.interpolate('Hello, ${name}', {name: 'Martin'});
@@ -15,8 +15,8 @@ commodity.interpolate('Hello, ${name}', {name: 'Martin'});
 
 Import individual methods
 ```javascript
-const shuffle = require('commodity/lib/shuffle');
-const interpolate = require('commodity/lib/interpolate');
+const shuffle = require('@fiverr/commodity/lib/shuffle');
+const interpolate = require('@fiverr/commodity/lib/interpolate');
 
 shuffle([1, 2, 3]);
 interpolate('Hello, ${name}', {name: 'Martin'});
