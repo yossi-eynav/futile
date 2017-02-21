@@ -6,6 +6,7 @@ Collection of low level Javascript helper functions targeting language primitive
 [![pull requests](https://img.shields.io/github/issues-pr/fiverr/commodity.svg)](https://github.com/fiverr/commodity/pulls)
 [![issues](https://img.shields.io/github/issues/fiverr/commodity.svg)](https://github.com/fiverr/commodity/issues)
 [![npm package](https://badge.fury.io/js/%40fiverr%2Fcommodity.svg)](https://www.npmjs.com/package/@fiverr/commodity)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d8a0b4da74f4b4ba30a356a4e2094e3)](https://www.codacy.com/app/omrilotan/commodity)
 
 ## Use commodity [Documentation](https://fiverr.github.io/commodity/)
 
