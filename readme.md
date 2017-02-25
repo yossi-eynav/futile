@@ -73,5 +73,5 @@ The version number specify `major`.`minor`.`patch`
 Type | Content | Example
 ---- | ------- | -----------
 patch | Internal fix | Performance updates, tests, small tweaks
-minor | Interface change with full backward compatibility | Adding a new function
+minor | Interface change with full backward compatibility | Adding a new function, Bug fix
 major | Interface change without full backward compatibility | Changing a function name or output, Removing a function

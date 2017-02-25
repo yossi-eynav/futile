@@ -8,6 +8,7 @@
     },
     "env": {},
     "globals": {
+        "global": true,
         "require": true,
         "module": true
     },
