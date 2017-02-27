@@ -2,10 +2,6 @@ machine:
   node:
     version: 6.9.4
 
-dependencies:
-  pre:
-    - sudo apt-get install nodejs
-    - npm install
 test:
   override:
     - npm run lint
