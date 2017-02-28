@@ -7,6 +7,11 @@ test:
     - npm run lint
     - npm test
 
+general:
+  branches:
+    ignore:
+      - gh-pages
+
 experimental:
   notify:
     branches:
