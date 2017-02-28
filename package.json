@@ -5,8 +5,8 @@
   "license": "MIT",
   "description": "Collection of low level Javascript helper functions targeting language primitives and native objects",
   "engines": {
-    "node" : ">=6.9.4",
-    "npm" : "~3.10.10"
+    "node": ">=6.9.4",
+    "npm": "~3.10.10"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "lint": "npm run lint-code && npm run lint-tests",
     "lint-code": "./node_modules/eslint/bin/eslint.js -c .eslintrc ./lib/**/* --ignore-path .eslintignore --quiet",
     "lint-tests": "./node_modules/eslint/bin/eslint.js -c .eslintrc-tests ./lib/**/* --ignore-path .eslintignore-tests --quiet",
+    "coverage": "./node_modules/nyc/bin/nyc.js npm test",
     "doc": "rm -rf docs/* && ./node_modules/jsdoc/jsdoc.js lib/ -c .jsdocrc.json --readme lib/doc.md",
     "publish": "./scripts/publish.sh"
   },
@@ -29,7 +30,8 @@
     "eslint": "^3.15.0",
     "eslint-plugin-react": "^6.9.0",
     "jsdoc": "^3.4.3",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "nyc": "^10.1.2"
   },
   "dependencies": {}
 }

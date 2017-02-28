@@ -52,6 +52,11 @@ npm test
 npm run testone lib/string/interpolate
 ```
 
+#### Coverage
+```sh
+npm run coverage
+```
+
 #### Rebuild docs
 ```sh
 npm run doc
