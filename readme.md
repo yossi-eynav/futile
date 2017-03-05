@@ -8,10 +8,10 @@
 [![npm package](https://badge.fury.io/js/%40fiverr%2Ffutile.svg)](https://www.npmjs.com/package/@fiverr/futile)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d8a0b4da74f4b4ba30a356a4e2094e3)](https://www.codacy.com/app/omrilotan/futile)
 
-[![bitHound Overall Score](https://www.bithound.io/github/fiverr/commodity/badges/score.svg)](https://www.bithound.io/github/fiverr/commodity)
-[![bitHound Code](https://www.bithound.io/github/fiverr/commodity/badges/code.svg)](https://www.bithound.io/github/fiverr/commodity)
-[![bitHound Dependencies](https://www.bithound.io/github/fiverr/commodity/badges/dependencies.svg)](https://www.bithound.io/github/fiverr/commodity/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/fiverr/commodity/badges/devDependencies.svg)](https://www.bithound.io/github/fiverr/commodity/master/dependencies/npm)
+[![bitHound Overall Score](https://www.bithound.io/github/fiverr/futile/badges/score.svg)](https://www.bithound.io/github/fiverr/futile)
+[![bitHound Code](https://www.bithound.io/github/fiverr/futile/badges/code.svg)](https://www.bithound.io/github/fiverr/futile)
+[![bitHound Dependencies](https://www.bithound.io/github/fiverr/futile/badges/dependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/fiverr/futile/badges/devDependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm)
 
 ## Use futile [Documentation](https://fiverr.github.io/futile/)
 

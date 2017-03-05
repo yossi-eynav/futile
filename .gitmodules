@@ -1,4 +1,4 @@
 [submodule "docs"]
 	path = docs
-	url = git@github.com:fiverr/commodity.git
+	url = git@github.com:fiverr/futile.git
 	branch = gh-pages
