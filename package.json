@@ -1,16 +1,16 @@
 {
-  "name": "@fiverr/commodity",
+  "name": "@fiverr/futile",
   "version": "1.1.0",
   "author": "Fiverr",
   "license": "MIT",
-  "description": "Collection of low level Javascript helper functions targeting language primitives and native objects",
+  "description": "Collection of low level ECMAScript helper functions targeting language primitives and native objects",
   "engines": {
     "node": ">=6.9.4",
     "npm": "~3.10.10"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fiverr/commodity.git"
+    "url": "https://github.com/fiverr/futile.git"
   },
   "main": "lib/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "publish": "./scripts/publish.sh"
   },
   "devDependencies": {
-    "@fiverr/eslint-config-fiverr": "0.0.9",
+    "@fiverr/eslint-config-fiverr": "0.0.11",
     "chai": "^3.5.0",
     "docdash": "^0.4.0",
     "eslint": "^3.15.0",
