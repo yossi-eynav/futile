@@ -1,19 +1,26 @@
-# Commodity
+# Futile
 
-## Collection of low level Javascript helper functions targeting language primitives and native objects
+## Collection of low level ECMAScript helper functions targeting language primitives and native objects
+
+[Fork me](https://github.com/fiverr/futile)
+
+Install
+```sh
+npm install @fiverr/futile --save
+```
 
 Import the library
 ```javascript
-const commodity = require('@fiverr/commodity');
+const futile = require('@fiverr/futile');
 
-commodity.shuffle([1, 2, 3]);
-commodity.interpolate('Hello, ${name}', {name: 'Martin'});
+futile.shuffle([1, 2, 3]);
+futile.interpolate('Hello, ${name}', {name: 'Martin'});
 ```
 
 Import individual methods
 ```javascript
-const shuffle = require('@fiverr/commodity/lib/shuffle');
-const interpolate = require('@fiverr/commodity/lib/interpolate');
+const shuffle = require('@fiverr/futile/lib/shuffle');
+const interpolate = require('@fiverr/futile/lib/interpolate');
 
 shuffle([1, 2, 3]);
 interpolate('Hello, ${name}', {name: 'Martin'});
