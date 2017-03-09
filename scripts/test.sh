@@ -1,4 +1,4 @@
-ARG=$1
+ARG=$@
 
 if [ $# -eq 0 ]; then
   ARG="$(find ./lib -name 'test.js')"

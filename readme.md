@@ -47,9 +47,10 @@ The content of this directory is gitignored (short of example file and __futile_
 npm run lint
 ```
 
-#### Test one
+#### Test some
 ```sh
 npm test lib/interpolate
+npm test lib/interpolate lib/shuffle
 ```
 
 #### Test all
