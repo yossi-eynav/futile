@@ -47,14 +47,14 @@ The content of this directory is gitignored (short of example file and __futile_
 npm run lint
 ```
 
+#### Test one
+```sh
+npm test lib/interpolate
+```
+
 #### Test all
 ```sh
 npm test
-```
-
-#### Test one
-```sh
-npm run testone lib/string/interpolate
 ```
 
 #### Coverage

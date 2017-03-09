@@ -14,8 +14,7 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "find ./lib -name 'test.js' | xargs ./node_modules/mocha/bin/mocha",
-    "testone": "./node_modules/mocha/bin/mocha",
+    "test": "./scripts/test.sh",
     "lint": "npm run lint-code && npm run lint-tests",
     "lint-code": "./node_modules/eslint/bin/eslint.js -c .eslintrc ./lib/**/* --ignore-path .eslintignore --quiet",
     "lint-tests": "./node_modules/eslint/bin/eslint.js -c .eslintrc-tests ./lib/**/* --ignore-path .eslintignore-tests --quiet",
