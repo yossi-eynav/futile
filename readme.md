@@ -2,16 +2,13 @@
 > Collection of low level ECMAScript helper functions targeting language primitives and native objects
 
 
-[![build status](https://circleci.com/gh/fiverr/futile.svg?style=shield)](https://circleci.com/gh/fiverr/futile)
-[![pull requests](https://img.shields.io/github/issues-pr/fiverr/futile.svg)](https://github.com/fiverr/futile/pulls)
-[![issues](https://img.shields.io/github/issues/fiverr/futile.svg)](https://github.com/fiverr/futile/issues)
-[![npm package](https://badge.fury.io/js/%40fiverr%2Ffutile.svg)](https://www.npmjs.com/package/@fiverr/futile)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d8a0b4da74f4b4ba30a356a4e2094e3)](https://www.codacy.com/app/omrilotan/futile)
+| Status | Version | Issues |
+| ------ | ------- | ------ |
+| [![build status](https://circleci.com/gh/fiverr/futile.svg?style=shield)](https://circleci.com/gh/fiverr/futile) | [![npm package](https://badge.fury.io/js/%40fiverr%2Ffutile.svg)](https://www.npmjs.com/package/@fiverr/futile) | [![pull requests](https://img.shields.io/github/issues-pr/fiverr/futile.svg)](https://github.com/fiverr/futile/pulls) [![issues](https://img.shields.io/github/issues/fiverr/futile.svg)](https://github.com/fiverr/futile/issues) |
 
-[![bitHound Overall Score](https://www.bithound.io/github/fiverr/futile/badges/score.svg)](https://www.bithound.io/github/fiverr/futile)
-[![bitHound Code](https://www.bithound.io/github/fiverr/futile/badges/code.svg)](https://www.bithound.io/github/fiverr/futile)
-[![bitHound Dependencies](https://www.bithound.io/github/fiverr/futile/badges/dependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/fiverr/futile/badges/devDependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm)
+| Overall | Code | Dependencies |
+| ------- | ---- | ------------ |
+| [![bitHound Overall Score](https://www.bithound.io/github/fiverr/futile/badges/score.svg)](https://www.bithound.io/github/fiverr/futile) | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d8a0b4da74f4b4ba30a356a4e2094e3)](https://www.codacy.com/app/omrilotan/futile) [![bitHound Code](https://www.bithound.io/github/fiverr/futile/badges/code.svg)](https://www.bithound.io/github/fiverr/futile) | [![bitHound Dependencies](https://www.bithound.io/github/fiverr/futile/badges/dependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/fiverr/futile/badges/devDependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm) |
 
 ## Use futile [Documentation](https://fiverr.github.io/futile/)
 
