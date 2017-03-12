@@ -2,7 +2,6 @@
 .nyc_output
 node_modules
 
-playground/*
-playground/node_modules/*
+playground/**/*
 !playground/example.js
 !playground/node_modules/@fiverr/futile
