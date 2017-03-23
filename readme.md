@@ -2,13 +2,13 @@
 > Collection of low level ECMAScript helper functions targeting language primitives and native objects
 
 
-| Status | Version | Issues |
-| ------ | ------- | ------ |
-| [![build status](https://circleci.com/gh/fiverr/futile.svg?style=shield)](https://circleci.com/gh/fiverr/futile) | [![npm package](https://badge.fury.io/js/%40fiverr%2Ffutile.svg)](https://www.npmjs.com/package/@fiverr/futile) | [![pull requests](https://img.shields.io/github/issues-pr/fiverr/futile.svg)](https://github.com/fiverr/futile/pulls) [![issues](https://img.shields.io/github/issues/fiverr/futile.svg)](https://github.com/fiverr/futile/issues) |
+[![build status](https://circleci.com/gh/fiverr/futile.svg?style=shield)](https://circleci.com/gh/fiverr/futile)
+[![npm package](https://badge.fury.io/js/%40fiverr%2Ffutile.svg)](https://www.npmjs.com/package/@fiverr/futile)
+[![pull requests](https://img.shields.io/github/issues-pr/fiverr/futile.svg)](https://github.com/fiverr/futile/pulls) [![issues](https://img.shields.io/github/issues/fiverr/futile.svg)](https://github.com/fiverr/futile/issues)
 
-| Overall | Code | Dependencies |
-| ------- | ---- | ------------ |
-| [![bitHound Overall Score](https://www.bithound.io/github/fiverr/futile/badges/score.svg)](https://www.bithound.io/github/fiverr/futile) | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d8a0b4da74f4b4ba30a356a4e2094e3)](https://www.codacy.com/app/omrilotan/futile) [![bitHound Code](https://www.bithound.io/github/fiverr/futile/badges/code.svg)](https://www.bithound.io/github/fiverr/futile) | [![bitHound Dependencies](https://www.bithound.io/github/fiverr/futile/badges/dependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/fiverr/futile/badges/devDependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm) |
+[![bitHound Overall Score](https://www.bithound.io/github/fiverr/futile/badges/score.svg)](https://www.bithound.io/github/fiverr/futile)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d8a0b4da74f4b4ba30a356a4e2094e3)](https://www.codacy.com/app/omrilotan/futile) [![bitHound Code](https://www.bithound.io/github/fiverr/futile/badges/code.svg)](https://www.bithound.io/github/fiverr/futile)
+[![bitHound Dependencies](https://www.bithound.io/github/fiverr/futile/badges/dependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm) [![bitHound Dev Dependencies](https://www.bithound.io/github/fiverr/futile/badges/devDependencies.svg)](https://www.bithound.io/github/fiverr/futile/master/dependencies/npm)
 
 ## Use futile [Documentation](https://fiverr.github.io/futile/)
 
@@ -69,11 +69,6 @@ Each module contains an index file - the exported module, and a test file.
 Modules should be commented in [JSDoc](http://usejsdoc.org/) so the automated documentation is up to date.
 
 Each collection (e.g. `str`, `arr`) needs to expose all it's modules, and `lib` should expose all collections.
-
-Pro git tip: Push to master with the new docs submodule
-```sh
-git push origin master --recurse-submodules=on-demand
-```
 
 ## Version management
 The version number specify `major`.`minor`.`patch`
