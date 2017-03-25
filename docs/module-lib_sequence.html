@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>lib/shuffle - Documentation</title>
+    <title>lib/sequence - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">lib/shuffle</h1>
+    <h1 class="page-title">lib/sequence</h1>
     
 
     
@@ -40,6 +40,8 @@
 <header>
     
         
+            
+        
     
 </header>
 
@@ -49,30 +51,11 @@
         
 
         
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
             
 
     
 
-    <h4 class="name" id="~shuffle"><span class="type-signature">(inner) </span>shuffle<span class="signature">(array, mutate)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    <h4 class="name" id="module:lib/sequence"><span class="type-signature"></span>(require("lib/sequence"))<span class="signature">(&hellip;steps)</span><span class="type-signature"> &rarr; {undefined}</span></h4>
 
     
 
@@ -84,7 +67,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="shuffle_index.js.html">shuffle/index.js</a>, <a href="shuffle_index.js.html#line15">line 15</a>
+        <a href="sequence_index.js.html">sequence/index.js</a>, <a href="sequence_index.js.html#line22">line 22</a>
     </li></ul></dd>
     
 
@@ -124,7 +107,7 @@
 
 
 <div class="description">
-    Shuffle array
+    A simpler interface to Flow for plain sequences of steps
 </div>
 
 
@@ -137,7 +120,14 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>shuffle([1, 2, 3], false)</code></pre>
+    <pre class="prettyprint"><code>sequence(
+  (next) => {
+    console.log('hello');
+    next();
+  },
+  (next) => { console.log(','); next() }),
+  () => console.log('World')
+);</code></pre>
 
 
 
@@ -155,6 +145,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -167,49 +159,33 @@
 
         <tr>
             
-                <td class="name"><code>array</code></td>
+                <td class="name"><code>steps</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array</span>
+<span class="param-type">function</span>
 
 
             
             </td>
 
             
-
-            
-
-            <td class="description last">An array</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mutate</code></td>
-            
-
-            <td class="type">
-            
+                <td class="attributes">
                 
-<span class="param-type">Boolean</span>
-|
 
-<span class="param-type">true</span>
+                
 
-
-            
-            </td>
-
+                
+                    &lt;repeatable><br>
+                
+                </td>
             
 
             
 
-            <td class="description last">whether to mutate the original array</td>
+            <td class="description last">All functions for the sequence</td>
         </tr>
 
     
@@ -233,7 +209,7 @@
 
         
 <div class="param-desc">
-    The shuffled array
+    No return value
 </div>
 
 
@@ -244,7 +220,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Array</span>
+<span class="param-type">undefined</span>
 
 
     </dd>
@@ -254,6 +230,21 @@
 
 
         
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
     
 
     

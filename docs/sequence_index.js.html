@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>global/index.js - Documentation</title>
+    <title>sequence/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">global/index.js</h1>
+    <h1 class="page-title">sequence/index.js</h1>
     
 
     
@@ -38,14 +38,32 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module lib/global
- * @since 1.1.0
- * @description exposes the global object (self | global | window)
+ * @module lib/sequence
+ * @since 1.2.0
  */
+const flow = require('../flow');
 
-module.exports = (typeof self === 'object' &amp;&amp; self.self === self &amp;&amp; self) ||
-    (typeof global === 'object' &amp;&amp; global.global === global &amp;&amp; global) || // eslint-disable-line no-undef
-    (typeof window === 'object' &amp;&amp; window.window === window &amp;&amp; window);
+/**
+ * A simpler interface to Flow for plain sequences of steps
+ * @param  {...Function} steps All functions for the sequence
+ * @return {undefined} No return value
+ *
+ * @example
+ * sequence(
+ *   (next) => {
+ *     console.log('hello');
+ *     next();
+ *   },
+ *   (next) => { console.log(','); next() }),
+ *   () => console.log('World')
+ * );
+ */
+module.exports = (...steps) => {
+    const _seq = flow();
+
+    steps.forEach((step) => _seq.step(step));
+    _seq.go();
+};
 </code></pre>
         </article>
     </section>
