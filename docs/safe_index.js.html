@@ -22,7 +22,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-lib_flow-Flow.html">Flow</a><ul class='methods'><li data-type='method'><a href="module-lib_flow-Flow.html#go">go</a></li><li data-type='method'><a href="module-lib_flow-Flow.html#step">step</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-index.html">index</a></li><li><a href="module-lib_flow.html">lib/flow</a></li><li><a href="module-lib_global.html">lib/global</a></li><li><a href="module-lib_interpolate.html">lib/interpolate</a><ul class='methods'><li data-type='method'><a href="module-lib_interpolate.html#~interpolate">interpolate</a></li></ul></li><li><a href="module-lib_pluck.html">lib/pluck</a><ul class='methods'><li data-type='method'><a href="module-lib_pluck.html#~pluck">pluck</a></li></ul></li><li><a href="module-lib_resolve.html">lib/resolve</a><ul class='methods'><li data-type='method'><a href="module-lib_resolve.html#~resolve">resolve</a></li></ul></li><li><a href="module-lib_safe.html">lib/safe</a><ul class='methods'><li data-type='method'><a href="module-lib_safe.html#~safe">safe</a></li></ul></li><li><a href="module-lib_sequence.html">lib/sequence</a></li><li><a href="module-lib_shuffle.html">lib/shuffle</a><ul class='methods'><li data-type='method'><a href="module-lib_shuffle.html#~shuffle">shuffle</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-lib_flow-Flow.html">Flow</a><ul class='methods'><li data-type='method'><a href="module-lib_flow-Flow.html#go">go</a></li><li data-type='method'><a href="module-lib_flow-Flow.html#step">step</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-index.html">index</a></li><li><a href="module-lib_flow.html">lib/flow</a></li><li><a href="module-lib_global.html">lib/global</a></li><li><a href="module-lib_interpolate.html">lib/interpolate</a></li><li><a href="module-lib_pluck.html">lib/pluck</a></li><li><a href="module-lib_resolve.html">lib/resolve</a></li><li><a href="module-lib_safe.html">lib/safe</a></li><li><a href="module-lib_sequence.html">lib/sequence</a></li><li><a href="module-lib_shuffle.html">lib/shuffle</a></li></ul>
 </nav>
 
 <div id="main">
@@ -59,11 +59,7 @@ function noop() { /* Do nothing */ }
  *
  * @example safe(fn, this, 'a', 'b', 'c')
  */
-function safe(fn, context, ...args) {
-    return (typeof fn === 'function' ? fn : noop).apply(context || null, args || []);
-}
-
-module.exports = safe;
+module.exports = (fn, context, ...args) => (typeof fn === 'function' ? fn : noop).apply(context || null, args || []);
 </code></pre>
         </article>
     </section>
