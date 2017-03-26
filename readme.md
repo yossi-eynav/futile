@@ -68,7 +68,7 @@ npm run doc
 Each module contains an index file - the exported module, and a test file.
 Modules should be commented in [JSDoc](http://usejsdoc.org/) so the automated documentation is up to date.
 
-Each collection (e.g. `str`, `arr`) needs to expose all it's modules, and `lib` should expose all collections.
+The `lib`'s index should expose all the collection.
 
 ## Version management
 The version number specify `major`.`minor`.`patch`
