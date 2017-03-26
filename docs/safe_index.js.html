@@ -57,7 +57,9 @@ function noop() { /* Do nothing */ }
  * @param  {Any[]}     args    Other arguments to pass onto the function
  * @return {Any}       Result of the function
  *
- * @example safe(fn, this, 'a', 'b', 'c')
+ * @example
+ * safe((a, b, c) => console.log(a + b + c), this, 'A', 'B', 'C');
+ * // 'ABC'
  */
 module.exports = (fn, context, ...args) => (typeof fn === 'function' ? fn : noop).apply(context || null, args || []);
 </code></pre>

@@ -49,7 +49,8 @@
  * @param  {String} key The key we want to pluck
  * @return {Array}  An array of the values stored in the specified key of each object
  *
- * @example pluck([{key_name: 1}, {key_name: 2}], 'key_name')
+ * @example pluck([{key_name: 1}, {key_name: 2}], 'key_name');
+ * // [1, 2]
  */
 module.exports = (objects = [], key) => objects.map((item) => item[key]);
 </code></pre>

@@ -49,7 +49,9 @@
  * @param  {Boolean|true} mutate - whether to mutate the original array
  * @return {Array} The shuffled array
  *
- * @example shuffle([1, 2, 3], false)
+ * @example
+ * shuffle([1, 2, 3], false);
+ * // [1, 3, 2] for example
  */
 module.exports = (array = [], mutate) => {
     if (!(array instanceof Array)) {

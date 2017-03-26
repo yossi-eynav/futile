@@ -67,7 +67,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="resolve_index.js.html">resolve/index.js</a>, <a href="resolve_index.js.html#line17">line 17</a>
+        <a href="resolve_index.js.html">resolve/index.js</a>, <a href="resolve_index.js.html#line30">line 30</a>
     </li></ul></dd>
     
 
@@ -120,7 +120,19 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>resolve('top_level.nested.value', data_object)</code></pre>
+    <pre class="prettyprint"><code>const data_object = {
+  top_level: {
+    nested: {
+      value: 'My Value'
+    }
+  }
+};
+
+resolve('top_level.nested.value', data_object);
+// 'My Value'
+
+resolve('top_level.missing.value', data_object);
+// undefined</code></pre>
 
 
 
