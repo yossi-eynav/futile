@@ -1,0 +1,15 @@
+*.log
+.DS_Store
+.bithoundrc
+.eslintignore
+.eslintignore-tests
+.eslintrc
+.eslintrc-tests
+.jsdocrc.json
+.nvmrc
+.nyc_output
+circle.yml
+coverage
+docs
+node_modules
+playground
