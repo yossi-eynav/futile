@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>interpolate/index.js - Documentation</title>
+    <title>select/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">interpolate/index.js</h1>
+    <h1 class="page-title">select/index.js</h1>
     
 
     
@@ -38,56 +38,31 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module lib/interpolate
- * @since 1.0.0
+ * @module lib/select
+ * @since 1.3.0
  */
+
 
 /**
- * @access private
- * @member {Array} Valid_result_types string, number
+ * Return an object's shallow copy filtering members based by a function
+ *
+ * @param  {Object} original key value pair
+ * @param  {Function} condition function accepting key, value as parameters and returning a boolean
+ * @return {Object} key value pair
+ *
+ * @example select({a:1, b:2, c:3, d:4}, (key, val) => val > 2);
+ * // {c:3, d:4}
  */
-const VALID_RESULT_TYPES = Object.seal(['string', 'number']);
+module.exports = (original, condition = () => false) => {
+    const result = {};
 
-/**
- * String interpolation in 3 flavours
- * @access public
- *
- * @param  {String} template string
- * @param  {Object} data object with flat key:value pairs
- * @return {String} interpolated result
- *
- * @example
- * // JS flavour:
- * interpolate('Hello, ${name}', {name: 'Martin'});
- * // 'Hello, Martin'
- *
- * // YML flavour:
- * interpolate('Hello, %{name}', {name: 'Martin'});
- * // 'Hello, Martin'
- *
- * // Handlebars flavour:
- * interpolate('Hello, {{name}}', {name: 'Martin'});
- * // 'Hello, Martin'
- */
-module.exports = (string = '', data) => {
-    if (typeof string !== 'string') {
-        throw new TypeError(`futile#interpolate expects first argument to be a string, got a ${typeof string}`);
+    for (const key in original) {
+        if (condition(key, original[key])) {
+            result[key] = original[key];
+        }
     }
 
-    if (!data) {
-        return string;
-    }
-
-    function replace(haystack, needle) {
-        const replacement = data[needle.trim()];
-        return ~VALID_RESULT_TYPES.indexOf(typeof replacement) ? replacement : haystack;
-    }
-
-    return string
-        .replace(/\${([^{}]*)}/g, replace)
-        .replace(/%{([^{}]*)}/g, replace)
-        .replace(/{{([^{}]*)}}/g, replace)
-        ;
+    return result;
 };
 </code></pre>
         </article>
