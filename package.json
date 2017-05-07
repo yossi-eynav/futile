@@ -1,11 +1,11 @@
 {
   "name": "@fiverr/futile",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "author": "Fiverr",
   "license": "MIT",
   "description": "Collection of low level ECMAScript helper functions targeting language primitives and native objects",
   "engines": {
-    "node": ">=6.9.4",
+    "node": ">=6.9.5",
     "npm": "~3.10.10"
   },
   "repository": {
@@ -15,6 +15,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "./scripts/test.sh",
+    "benchmark": "./scripts/benchmark.sh",
     "lint": "npm run lint-code && npm run lint-tests",
     "lint-code": "./node_modules/eslint/bin/eslint.js -c .eslintrc ./lib/**/* --ignore-path .eslintignore --quiet",
     "lint-tests": "./node_modules/eslint/bin/eslint.js -c .eslintrc-tests ./lib/**/* --ignore-path .eslintignore-tests --quiet",
