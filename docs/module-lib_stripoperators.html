@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>capitalize/index.js - Documentation</title>
+    <title>lib/stripoperators - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,38 +27,213 @@
 
 <div id="main">
     
-    <h1 class="page-title">capitalize/index.js</h1>
+    <h1 class="page-title">lib/stripoperators</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @module lib/capitalize
- * @since 1.4.0
- */
+        
+            
+        
+    
+</header>
 
-/**
- * Uppercase first character
- * @private
- * @param  {String} string Any string
- * @return {String} A string where the first character is uppercased
- */
-const cap = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * Uppercase first character of each word in a string
- * @param  {String} string A word or a sentence
- * @return {String} string capitalising every first letter of a word in a sentence
- */
-module.exports = (string = '', all = false) => all ? string.split(' ').map(cap).join(' ') : cap(string);
-</code></pre>
-        </article>
-    </section>
+        
+            
+
+    
+
+    <h4 class="name" id="module:lib/stripoperators"><span class="type-signature"></span>(require("lib/stripoperators"))<span class="signature">(string)</span><span class="type-signature"> &rarr; {String}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="stripoperators_index.js.html">stripoperators/index.js</a>, <a href="stripoperators_index.js.html#line20">line 20</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    return a string with stripped operators
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>stripoperators('weird things)') // => 'weird things'</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    a string safe for RegExp
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

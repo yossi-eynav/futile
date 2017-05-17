@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>capitalize/index.js - Documentation</title>
+    <title>stripoperators/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">capitalize/index.js</h1>
+    <h1 class="page-title">stripoperators/index.js</h1>
     
 
     
@@ -38,25 +38,25 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module lib/capitalize
- * @since 1.4.0
+ * @module lib/stripoperators
+ * @since 1.6.0
  */
 
 /**
- * Uppercase first character
+ * Regex operators match
  * @private
- * @param  {String} string Any string
- * @return {String} A string where the first character is uppercased
+ * @type {RegExp}
  */
-const cap = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+const OPERATORS_MATCH = /[|\\{}()[\]^$+*?.]/g;
 
 /**
- * Uppercase first character of each word in a string
- * @param  {String} string A word or a sentence
- * @return {String} string capitalising every first letter of a word in a sentence
+ * return a string with stripped operators
+ * @param  {String} string
+ * @return {String} a string safe for RegExp
+ *
+ * @example stripoperators('weird things)') // => 'weird things'
  */
-module.exports = (string = '', all = false) => all ? string.split(' ').map(cap).join(' ') : cap(string);
-</code></pre>
+module.exports = (string = '') => string.replace(OPERATORS_MATCH, '');</code></pre>
         </article>
     </section>
 
