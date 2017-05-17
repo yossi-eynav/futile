@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>strippedregexp/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,40 +27,63 @@
 
 <div id="main">
     
+    <h1 class="page-title">strippedregexp/index.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module lib/strippedregexp
+ * @since 1.5.0
+ */
 
+/**
+ * Regex operators match
+ * @private
+ * @type {RegExp}
+ */
+const OPERATORS_MATCH = /[|\\{}()[\]^$+*?.]/g;
 
+/**
+ * return a string with stripped operators
+ * @private
+ * @param  {String} string
+ * @return {String} a string safe for RegExp
+ *
+ * @example strip('weird things)') // => 'weird things'
+ */
+const strip = (string = '') => string.replace(OPERATORS_MATCH, '');
 
+/**
+ * @class StrippedRegExp
+ * @extends RegExp
+ * @classdesc Create a RegExp from string ignoring operators
+ *
+ * @param {String|RegExp} pattern
+ * @param {String} [flags]
+ * @returns {RegExp} a regex object ignoring operators
+ *
+ * @example new StrippedRegExp('weird stuff)', 'g')
+ */
+class StrippedRegExp extends RegExp {
+    constructor(...args) {
+        if (typeof args[0] === 'string') {
+            args[0] = strip(args[0]);
+        }
 
+        super(...args);
+    }
+}
 
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>Futile</h1><h2>Collection of low level ECMAScript helper functions targeting language primitives and native objects</h2><p><a href="https://github.com/fiverr/futile">Fork me</a></p>
-<p>Install</p>
-<pre class="prettyprint source lang-sh"><code>npm install @fiverr/futile --save</code></pre><p>Import the library</p>
-<pre class="prettyprint source lang-javascript"><code>const futile = require('@fiverr/futile');
-
-futile.shuffle([1, 2, 3]);
-futile.interpolate('Hello, ${name}', {name: 'Martin'});</code></pre><p>Import individual methods</p>
-<pre class="prettyprint source lang-javascript"><code>const shuffle = require('@fiverr/futile/lib/shuffle');
-const interpolate = require('@fiverr/futile/lib/interpolate');
-
-shuffle([1, 2, 3]);
-interpolate('Hello, ${name}', {name: 'Martin'});</code></pre></article>
+module.exports = StrippedRegExp;
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
