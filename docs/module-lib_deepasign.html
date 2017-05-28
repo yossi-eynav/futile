@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>lib/shuffle - Documentation</title>
+    <title>lib/deepasign - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">lib/shuffle</h1>
+    <h1 class="page-title">lib/deepasign</h1>
     
 
     
@@ -55,7 +55,7 @@
 
     
 
-    <h4 class="name" id="module:lib/shuffle"><span class="type-signature"></span>(require("lib/shuffle"))<span class="signature">(array, mutate)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    <h4 class="name" id="module:lib/deepasign"><span class="type-signature"></span>(require("lib/deepasign"))<span class="signature">(target, &hellip;others)</span><span class="type-signature"> &rarr; {Object}</span></h4>
 
     
 
@@ -67,7 +67,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="shuffle_index.js.html">shuffle/index.js</a>, <a href="shuffle_index.js.html#line17">line 17</a>
+        <a href="deepassign_index.js.html">deepassign/index.js</a>, <a href="deepassign_index.js.html#line14">line 14</a>
     </li></ul></dd>
     
 
@@ -107,7 +107,7 @@
 
 
 <div class="description">
-    Shuffle array
+    [description]
 </div>
 
 
@@ -120,8 +120,7 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>shuffle([1, 2, 3], false);
-// [1, 3, 2] for example</code></pre>
+    <pre class="prettyprint"><code>deepasign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}</code></pre>
 
 
 
@@ -139,6 +138,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -151,49 +152,64 @@
 
         <tr>
             
-                <td class="name"><code>array</code></td>
+                <td class="name"><code>target</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array</span>
+<span class="param-type">Object</span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">An array</td>
+            <td class="description last">Target object to assign to</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>mutate</code></td>
+                <td class="name"><code>others</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
-|
-
-<span class="param-type">true</span>
+<span class="param-type">Object</span>
 
 
             
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
 
             
 
-            <td class="description last">whether to mutate the original array</td>
+            <td class="description last">The objects from which to deep assign respective values</td>
         </tr>
 
     
@@ -217,7 +233,7 @@
 
         
 <div class="param-desc">
-    The shuffled array
+    Original target, assigned
 </div>
 
 
@@ -228,7 +244,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Array</span>
+<span class="param-type">Object</span>
 
 
     </dd>

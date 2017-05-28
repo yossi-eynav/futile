@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>lib/shuffle - Documentation</title>
+    <title>deepassign/index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,240 +27,112 @@
 
 <div id="main">
     
-    <h1 class="page-title">lib/shuffle</h1>
+    <h1 class="page-title">deepassign/index.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-            
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-
-        
-            
-
-    
-
-    <h4 class="name" id="module:lib/shuffle"><span class="type-signature"></span>(require("lib/shuffle"))<span class="signature">(array, mutate)</span><span class="type-signature"> &rarr; {Array}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="shuffle_index.js.html">shuffle/index.js</a>, <a href="shuffle_index.js.html#line17">line 17</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    Shuffle array
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>shuffle([1, 2, 3], false);
-// [1, 3, 2] for example</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>array</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An array</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mutate</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-|
-
-<span class="param-type">true</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">whether to mutate the original array</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    The shuffled array
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Array</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-     
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module lib/deepasign
+ * @since 1.7.0
+ */
+
+/**
+ * [description]
+ * @param  {Object}    target Target object to assign to
+ * @param  {...Object} others The objects from which to deep assign respective values
+ * @return {Object} Original target, assigned
+ *
+ * @example deepasign({hash: {a: 1}}, {hash: {b: 2, c: 0}}, {hash: {c: 3}}) // {hash: {a: 1, b:2, c: 3}}
+ */
+module.exports = (target, ...others) => {
+    assignable(target) &amp;&amp; others.forEach((other) => assign(target, other));
+
+    return target;
+};
+
+/**
+ * Checks this object is an assignable object
+ * @private
+ * @param  {Object} target
+ * @return {Boolean} is this object "assignable"
+ */
+const assignable = (target) => isObject(target) &amp;&amp; ![undefined, null].includes(target);
+
+/**
+ * Checks a target is an object, excludes null
+ * @private
+ * @param  {Any} target [description]
+ * @return {Boolean} Is the target an object
+ */
+const isObject = (target) => ['object', 'function'].includes(typeof target) &amp;&amp; target !== null;
+
+/**
+ * Delegate to assign keys and symbols
+ * @private
+ * @param  {Object} to   Target object to assign to
+ * @param  {Object} from The object from which to assign respective values
+ * @return {Object} Original to, assigned
+ */
+function assign(to, from) {
+    to = Object(to);
+    from = Object(from);
+
+    assignKeys(to, from);
+    assignSymbols(to, from);
+
+    return to;
+}
+
+/**
+ * Assign second object keys to first
+ * @private
+ * @param  {Object} to   Target object to assign to
+ * @param  {Object} from The object from which to assign respective values
+ * no return value
+ */
+const assignKeys = (to, from) => Object.keys(from)
+    .forEach((key) => assignKey(to, from, key));
+
+/**
+ * Assign second object symbols to first
+ * @private
+ * @param  {Object} to   Target object to assign to
+ * @param  {Object} from The object from which to assign respective values
+ * no return value
+ */
+const assignSymbols = (to, from) => getOwnPropertySymbols(from)
+    .forEach((symbol) => assignKey(to, from, symbol));
+
+/**
+ * Perform getOwnPropertySymbols when available
+ * @private
+ * @param  {Object} object
+ * @return {Array} List of symbol keys (falls back to an empty array)
+ */
+const getOwnPropertySymbols = (object) => Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(object) : [];
+
+/**
+ * assign one key from one object to the target
+ * @private
+ * @param  {Object} to   Target object to assign to
+ * @param  {Object} from The object to assign value
+ * @param  {String|Symbol} key
+ * no return value
+ */
+function assignKey(to, from, key) {
+    const easyAssign = !to.hasOwnProperty(key) || !isObject(from[key]);
+
+    to[key] = easyAssign ? from[key] : assign(Object.assign({}, to[key]), from[key]);
+}
+</code></pre>
+        </article>
+    </section>
 
 
 
